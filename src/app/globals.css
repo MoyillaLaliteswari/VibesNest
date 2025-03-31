@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0000;
+  --foreground: #0a0a0a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #0a0a0a;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+
+/* Sleek Scrollbar */
+.sleek-scrollbar::-webkit-scrollbar {
+  width: 6px; /* Thin scrollbar */
+}
+
+.sleek-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Track is hidden */
+}
+
+.sleek-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2); /* Light scrollbar */
+  border-radius: 10px;
+}
+
+.sleek-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4); /* Slightly darker on hover */
+}
+
+.sleek-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
