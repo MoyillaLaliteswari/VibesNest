@@ -6,8 +6,8 @@ export function middleware(request: NextRequest) {
     const isPublicPath =
         path === '/login' ||
         path === '/signup' ||
-        path === '/verifyEmail' ||
-        path === '/reset-password'; 
+        path === '/verifyemail' ||
+        path === '/resetPassword'; 
 
     const token = request.cookies.get('token')?.value || '';
 
@@ -25,8 +25,8 @@ export const config = {
         '/profile',
         '/login',
         '/signup',
-        '/verifyEmail',
-        '/reset-password', 
+        '/verifyemail',
+        '/resetPassword', 
         '/addPost',
         '/posts/:path',
         '/myPosts',
